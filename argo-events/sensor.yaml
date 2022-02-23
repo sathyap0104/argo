@@ -25,7 +25,7 @@ spec:
   dependencies:
     - name: test-dep
       eventSourceName: webhook
-      eventName: example
+      eventName: nodejs-welcome
   triggers:
     - template:
         name: workflow-trigger
@@ -33,9 +33,9 @@ spec:
           operation: create
           source:
             git:
-              url: "git@github.com:argoproj/argo-workflows.git"
-              cloneDirectory: "/git/argoproj"
+              url: "git@github.com:sathyap0104/argo.git"
+              cloneDirectory: "/git/argo"
               sshKeyPath: "/secret/key"
               namespace: argo-events
-              filePath: "examples/hello-world.yaml"
+              filePath: "argo-workflow/kaniko-wf.yaml"
               branch: "master"
