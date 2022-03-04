@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: kaniko-build1
+  name: kaniko-build2
   labels:
     workflows.argoproj.io/archive-strategy: "false"
 spec:
@@ -30,5 +30,5 @@ spec:
           - name: container_image
             value: sathyap04/kaniko
           - name: container_tag
-            value: "1.1.0"
+            value: "1.1.1"
 
